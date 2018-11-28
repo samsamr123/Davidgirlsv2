@@ -6,15 +6,16 @@ ng-controller="AppController as app">
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-    <title>About Us</title>
+    <title>Dynasties</title>
     <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
     <!-- Load Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha256-xWeRKjzyg6bep9D1AsHzUPEWHbWMzlRc84Z0aG+tyms= sha512-mGIRU0bcPaVjr7BceESkC37zD6sEccxE+RJyQABbbKNe83Y68+PyPM5nrE1zvbQZkSHDCJEtnAcodbhlq2/EkQ==" crossorigin="anonymous">
     <!-- Load custom styles -->
     <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|Work+Sans" rel="stylesheet">
-
     <link rel='stylesheet' href='css/homepage_style.css'>
-    <link rel="stylesheet" href='aboutmestyle.css'>
+    <link rel="stylesheet" href='page.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
   </head>
   <header>
     <div class="nav">
@@ -41,6 +42,67 @@ ng-controller="AppController as app">
         <div class="col-sm-12">
           <h1> Dynasties </h1>
           <p>Dynasties is a 2018 British nature documentary series on five vulnerable or endangered species known to form enduring populations: chimpanzee, emperor penguin, lion, tiger and African wild dog. The series is produced by the BBC Natural History Unit and narrated by David Attenborough. The music score was composed by Benji Merrison.</p>
+<!--Slideshow-->
+          <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="https://ichef.bbci.co.uk/images/ic/480xn/p06n94cw.jpg" style="width:100%">
+            <div class="text">All</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="https://ichef.bbci.co.uk/images/ic/720x405/p06s7g07.jpg" style="width:100%">
+            <div class="text">Emporer Penguin</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="https://ichef.bbci.co.uk/images/ic/640x360/p01h92gg.jpg" style="width:100%">
+            <div class="text">Tiger</div>
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          </div>
+          <br>
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+
+          <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+          }
+          </script>
+
         </div>
       </div>
       <div class= "row">
@@ -82,9 +144,7 @@ An extraordinary story of leadership against all odds.</p>
         </div>
         <p>This episode features a painted wolf named Tait, matriarch of one of the last great families of this endangered animal. She has ruled her dynasty for many years on the banks of Zambezi river in Zimbabwe, keeping the peace within her sprawling family. But tensions are rising as Tait is growing old and her power is waning.
 
-One of her daughters, Blacktip, lives close by. Her own pack is growing fast and they are running out of space. She urgently needs to get more territory so that her pack can catch enough food. But she has a problem, she is hemmed in on one side by human lands and there is only one way she can go to get what she needs - her own mother's lands.
-
-Painted wolves thrive through cooperation. It is what had made this dynasty so strong for so long. A family feud could bring it to its knees.</p>
+One of her daughters, Blacktip, lives close by. Her own pack is growing fast and they are running out of space. She urgently needs to get more territory so that her pack can catch enough food. But she has a problem, she is hemmed in on one side by human lands and there is only one way she can go to get what she needs - her own mother's lands.</p>
        </div>
     </div>
   </div>
