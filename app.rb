@@ -2,6 +2,12 @@ require 'sinatra'
 require 'pony'
 
 
+set :port, 8080
+set :static, true
+set :public_folder, "static"
+set :views, "views"
+
+
 Pony.options = {
   via: 'smtp',
   via_options: {
@@ -37,4 +43,21 @@ post'/signup' do
   send_email
 
   erb :thanks
+end
+
+get '/blue' do
+  erb :blue
+end
+
+
+get '/dynasties' do
+  erb :dynasties
+end
+
+get '/earth' do
+  erb :earth
+end
+
+get '/life' do
+  erb :life
 end
