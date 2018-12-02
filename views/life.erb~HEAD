@@ -28,11 +28,11 @@ ng-controller="AppController as app">
       </div>
       <input type="checkbox" id="nav-check">
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="Dynasties.html">Dynasties</a>
-        <a href="Blue.html">Blue Planet</a>
-        <a href="Earth.html">Planet Earth</a>
-        <a href="Life.html">Life</a>
+        <a href="index">Home</a>
+        <a href="dynasties">Dynasties</a>
+        <a href="blue">Blue Planet</a>
+        <a href="earth">Planet Earth</a>
+        <a href="life">Life</a>
       </div>
     </div>
   </header>
