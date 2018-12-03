@@ -3,9 +3,9 @@ require 'pony'
 
 
 set :port, 8080
-set :static, true
-set :public_folder, "static"
-set :views, "views"
+# set :static, true
+# set :public_folder, "public"
+# set :views, "views"
 
 
 Pony.options = {
